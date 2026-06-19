@@ -36,7 +36,7 @@ export function FavouriteDeities() {
             <EmptyMedia variant="icon" className="size-12 rounded-full bg-primary/10 text-primary">
               <Heart className="size-6" aria-hidden="true" />
             </EmptyMedia>
-            <EmptyTitle className="text-lg">No favourites yet</EmptyTitle>
+            <EmptyTitle className="text-lg">No favourite deities saved yet</EmptyTitle>
             <EmptyDescription>
               Tap the heart on any deity to save them here for easy reflection later.
             </EmptyDescription>

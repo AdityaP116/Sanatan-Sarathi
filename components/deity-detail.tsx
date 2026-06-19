@@ -34,12 +34,22 @@ export function DeityDetail({ deity }: { deity: Deity }) {
           />
         </div>
         <div>
-          <h1 className="font-heading text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+          <Badge
+            variant="secondary"
+            className="rounded-full px-3 py-1 text-xs font-medium uppercase tracking-[0.14em] text-gold"
+          >
+            {deity.category}
+          </Badge>
+          <h1 className="mt-4 font-heading text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
             {deity.name}
           </h1>
           <p className="mt-3 text-pretty text-lg font-medium text-primary">{deity.title}</p>
           <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
             {deity.shortDescription}
+          </p>
+          <p className="mt-4 text-sm text-muted-foreground">
+            <span className="font-medium text-foreground/70">Also known as: </span>
+            {deity.aliases.join(", ")}
           </p>
           <div className="mt-6">
             <FavouriteButton slug={deity.slug} variant="full" />

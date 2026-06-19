@@ -3,10 +3,14 @@ export interface Mantra {
   transliteration: string
 }
 
+export type DeityCategory = "Supreme Trinity" | "Divine Avatar" | "Divine Mother" | "Beloved Gods"
+
 export interface Deity {
   slug: string
   name: string
   title: string
+  aliases: string[]
+  category: DeityCategory
   shortDescription: string
   overview: string
   story: string
@@ -26,6 +30,8 @@ export const deities: Deity[] = [
     slug: "shiva",
     name: "Lord Shiva",
     title: "The Transformer, Lord of Destruction and Renewal",
+    aliases: ["Mahadev", "Shankar", "Neelkanth", "Bholenath", "Rudra", "Mahesh", "Nataraja"],
+    category: "Supreme Trinity",
     shortDescription:
       "The auspicious one who destroys to create anew, the great ascetic and lord of meditation.",
     overview:
@@ -50,6 +56,8 @@ export const deities: Deity[] = [
     slug: "vishnu",
     name: "Lord Vishnu",
     title: "The Preserver, Sustainer of the Universe",
+    aliases: ["Narayana", "Hari", "Madhava", "Govinda", "Vasudeva", "Padmanabha"],
+    category: "Supreme Trinity",
     shortDescription:
       "The compassionate protector who preserves cosmic order and descends as avatars to restore righteousness.",
     overview:
@@ -74,6 +82,8 @@ export const deities: Deity[] = [
     slug: "krishna",
     name: "Lord Krishna",
     title: "The Divine Cowherd, Teacher of the Bhagavad Gita",
+    aliases: ["Kanha", "Gopal", "Govinda", "Madhava", "Murari", "Banke Bihari", "Keshava"],
+    category: "Divine Avatar",
     shortDescription:
       "The playful and wise avatar of Vishnu, charioteer of Arjuna and speaker of timeless divine wisdom.",
     overview:
@@ -98,6 +108,8 @@ export const deities: Deity[] = [
     slug: "ganesha",
     name: "Lord Ganesha",
     title: "The Remover of Obstacles, Lord of Beginnings",
+    aliases: ["Ganpati", "Vinayaka", "Ganapati", "Vighnaharta", "Gajanan", "Lambodara"],
+    category: "Beloved Gods",
     shortDescription:
       "The elephant-headed god of wisdom and new beginnings, worshipped first before any auspicious undertaking.",
     overview:
@@ -122,6 +134,8 @@ export const deities: Deity[] = [
     slug: "hanuman",
     name: "Lord Hanuman",
     title: "The Devoted One, Embodiment of Strength and Service",
+    aliases: ["Bajrangbali", "Maruti", "Anjaneya", "Pawanputra", "Sankat Mochan", "Kesari Nandan"],
+    category: "Beloved Gods",
     shortDescription:
       "The mighty devotee of Lord Rama, symbol of unwavering devotion, courage, and selfless service.",
     overview:
@@ -146,6 +160,8 @@ export const deities: Deity[] = [
     slug: "lakshmi",
     name: "Goddess Lakshmi",
     title: "The Goddess of Wealth, Fortune, and Prosperity",
+    aliases: ["Mahalakshmi", "Shri", "Sri", "Kamala", "Padma", "Lakshmiji"],
+    category: "Divine Mother",
     shortDescription:
       "The radiant goddess of wealth, abundance, and grace, consort of Lord Vishnu.",
     overview:
@@ -170,6 +186,8 @@ export const deities: Deity[] = [
     slug: "saraswati",
     name: "Goddess Saraswati",
     title: "The Goddess of Knowledge, Music, and Arts",
+    aliases: ["Sharada", "Vani", "Veena Vadini", "Bharati", "Vagdevi"],
+    category: "Divine Mother",
     shortDescription:
       "The serene goddess of wisdom, learning, music, and the creative arts, dressed in pure white.",
     overview:
@@ -194,6 +212,8 @@ export const deities: Deity[] = [
     slug: "durga",
     name: "Goddess Durga",
     title: "The Invincible Mother, Protector of the Righteous",
+    aliases: ["Maa Durga", "Shakti", "Amba", "Bhavani", "Sherawali", "Chandi"],
+    category: "Divine Mother",
     shortDescription:
       "The fierce and protective mother goddess who vanquishes evil and safeguards the cosmic order.",
     overview:
@@ -218,6 +238,8 @@ export const deities: Deity[] = [
     slug: "kali",
     name: "Goddess Kali",
     title: "The Fierce Mother, Destroyer of Evil and Ego",
+    aliases: ["Kalika", "Mahakali", "Shyama", "Adya", "Bhadrakali"],
+    category: "Divine Mother",
     shortDescription:
       "The powerful goddess of time and transformation who annihilates evil and liberates the soul.",
     overview:
@@ -242,6 +264,8 @@ export const deities: Deity[] = [
     slug: "kartikeya",
     name: "Lord Kartikeya",
     title: "The Commander of the Divine Army, God of Valor",
+    aliases: ["Murugan", "Skanda", "Subramanya", "Kartik", "Shanmukha", "Kumara"],
+    category: "Beloved Gods",
     shortDescription:
       "The youthful warrior god, son of Shiva, leader of the celestial armies and bestower of wisdom.",
     overview:
@@ -264,6 +288,16 @@ export const deities: Deity[] = [
   },
 ]
 
+/** The deity highlighted in the personal "My Father's Favourite Deity" section. */
+export const fathersFavourite = {
+  slug: "shiva",
+  note: "This deity has always held a special place in our family's spiritual journey. Growing up, the quiet strength of Mahadev, his calm in the face of every storm, and his boundless compassion were the very values my father lived by and gently passed on to me.",
+}
+
+export function getFathersFavouriteDeity(): Deity | undefined {
+  return getDeityBySlug(fathersFavourite.slug)
+}
+
 export function getDeityBySlug(slug: string): Deity | undefined {
   return deities.find((d) => d.slug === slug)
 }
@@ -279,7 +313,9 @@ export function searchDeities(query: string): Deity[] {
     return (
       d.name.toLowerCase().includes(q) ||
       d.title.toLowerCase().includes(q) ||
+      d.category.toLowerCase().includes(q) ||
       d.shortDescription.toLowerCase().includes(q) ||
+      d.aliases.some((a) => a.toLowerCase().includes(q)) ||
       d.attributes.some((a) => a.toLowerCase().includes(q)) ||
       d.festivals.some((f) => f.toLowerCase().includes(q)) ||
       d.vahana.name.toLowerCase().includes(q)
@@ -307,5 +343,9 @@ export const dailyWisdomQuotes = [
   {
     text: "Set thy heart upon thy work, but never on its reward.",
     source: "Bhagavad Gita 2.47",
+  },
+  {
+    text: "The wise see knowledge and action as one; they see truly.",
+    source: "Bhagavad Gita 5.4",
   },
 ]

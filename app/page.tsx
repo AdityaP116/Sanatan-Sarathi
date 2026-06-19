@@ -1,4 +1,6 @@
 import { DailyWisdom } from "@/components/daily-wisdom"
+import { Dedication } from "@/components/dedication"
+import { FathersFavourite } from "@/components/fathers-favourite"
 import { FavouriteDeities } from "@/components/favourite-deities"
 import { FeaturedDeities } from "@/components/featured-deities"
 import { Hero } from "@/components/hero"
@@ -11,8 +13,10 @@ export default function HomePage() {
       <SiteHeader />
       <main className="flex-1">
         <Hero />
+        <Dedication />
         <FeaturedDeities />
         <DailyWisdom />
+        <FathersFavourite />
         <FavouriteDeities />
       </main>
       <SiteFooter />
