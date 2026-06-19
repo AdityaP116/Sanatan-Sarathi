@@ -41,7 +41,7 @@ export function FavouriteDeities() {
               Tap the heart on any deity to save them here for easy reflection later.
             </EmptyDescription>
           </EmptyHeader>
-          <Button variant="outline" className="rounded-full" render={<Link href="/search" />}>
+          <Button variant="outline" className="rounded-full" nativeButton={false} render={<Link href="/search" />}>
             <Search data-icon="inline-start" aria-hidden="true" />
             Explore Deities
           </Button>

@@ -15,6 +15,7 @@ export function DeityDetail({ deity }: { deity: Deity }) {
       <Button
         variant="ghost"
         className="mb-6 -ml-2 text-muted-foreground"
+        nativeButton={false}
         render={<Link href="/search" />}
       >
         <ArrowLeft data-icon="inline-start" aria-hidden="true" />

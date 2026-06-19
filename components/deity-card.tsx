@@ -30,6 +30,7 @@ export function DeityCard({ deity }: { deity: Deity }) {
         <Button
           variant="ghost"
           className="px-0 text-primary hover:bg-transparent hover:text-primary"
+          nativeButton={false}
           render={<Link href={`/deity/${deity.slug}`} />}
         >
           View Details
