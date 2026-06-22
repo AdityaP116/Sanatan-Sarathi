@@ -1,211 +1,204 @@
 <div align="center">
+  <img src="public/home-full.png" alt="Sanatan Sarathi" width="800" style="border-radius: 12px; margin-bottom: 24px;" />
 
-# 🕉️ Sanatan Sarathi
+  <h1>Sanatan Sarathi</h1>
+  <p><strong>Your Guide to Hindu Wisdom</strong></p>
+  <p>
+    A modern spiritual companion designed to make the wisdom of Sanatana Dharma more accessible through a thoughtful and beautifully crafted digital experience.
+  </p>
+  <p>
+    <a href="#dedicated-to-my-father">Created as a tribute for Father's Day.</a>
+  </p>
 
-### _Your Companion on the Path of Sacred Wisdom_
-
-**A modern spiritual companion to explore the stories, symbols, festivals, and sacred mantras of Hindu deities through a beautiful and accessible digital experience.**
-
-🪔 _Created with love as a Father's Day tribute._ 🪔
-
-<br/>
-
-![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=for-the-badge&logo=next.js&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-0055FF?style=for-the-badge&logo=framer&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-E11D48?style=for-the-badge)
-
+  <p>
+    <img src="https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js" alt="Next.js" />
+    <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/Tailwind%20CSS-v4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+    <img src="https://img.shields.io/badge/Framer%20Motion-black?style=flat-square&logo=framer" alt="Framer Motion" />
+    <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License" />
+  </p>
 </div>
 
 ---
 
-## 🌸 Introduction
+## The Inspiration
 
-**Sanatan Sarathi** ("the eternal charioteer") is a serene, mobile-first web application that invites you to walk among the deities of Sanatana Dharma. Each profile gathers a deity's origin story, sacred symbols, vahana (divine mount), associated festivals, and revered mantras into one calm, uncluttered space — designed to be as approachable for a curious newcomer as it is meaningful for a lifelong devotee.
+Sanatan Sarathi was born out of a desire to bridge the gap between ancient tradition and modern technology. Our parents and elders often hold a deep respect for Sanatana Dharma, yet navigating the vast ocean of knowledge—from deities and festivals to symbols and mantras—can be fragmented across various books, articles, and websites.
 
-It was built not as a product, but as a **gift** — a small offering of gratitude to my father, whose quiet faith first taught me the value of these stories.
+I built this project as a deeply personal Father's Day gift. I wanted to create a space that respects the sanctity of these teachings while presenting them in a beautiful, accessible, and dignified format. It is a tribute not just to the divine, but to the fathers who pass down these values to the next generation.
 
----
+## The Problem
 
-## ✨ Inspiration
+Learning about Hindu deities, their stories, and their associated rituals requires piecing together information from scattered sources. For many, especially elders who are less familiar with navigating complex digital platforms, this can be overwhelming. There was a clear need for a unified, serene, and respectful platform that organizes this spiritual knowledge into an intuitive experience.
 
-This project grew from a simple wish: to honor my father.
+## The Solution
 
-- 🙏 **Respect for Sanatana Dharma** — preserving timeless stories and wisdom for a new generation.
-- 💝 **A meaningful gift** — something handcrafted and personal for my father on Father's Day.
-- 📖 **Accessible knowledge** — making spiritual learning easy to explore, search, and enjoy.
-- 🌉 **Tradition meets technology** — pairing ancient devotion with a modern, polished interface.
+Sanatan Sarathi acts as a unified digital companion. It distills complex spiritual information into an elegant, distraction-free environment. 
 
----
-
-## 🎁 Features
-
-- 🔍 **Search deities by name** — instant, alias-aware search (try _"Mahadev"_, _"Bajrangbali"_, or _"Neelkanth"_).
-- 🌟 **Browse featured deities** — a curated gallery on the homepage.
-- 📜 **Detailed deity profiles** — rich, beautifully laid-out pages for each deity.
-- 🏛️ **Story & origin information** — the lore and meaning behind every deity.
-- 🔱 **Symbols & attributes** — explore the iconography and what it represents.
-- 🦚 **Vahana information** — discover each deity's divine mount.
-- 🎉 **Associated festivals** — learn the celebrations tied to each deity.
-- 🕉️ **Sacred mantras** — authentic mantras presented with reverence.
-- 📋 **Copy mantra** — one-tap copy for personal practice.
-- ❤️ **Favourite deities** — save the ones closest to your heart.
-- 🌅 **Daily wisdom** — a rotating verse to inspire each day.
-- 📱 **Responsive design** — graceful from mobile to desktop.
-- ♿ **Accessibility-focused** — built to be usable by everyone.
+Whether you are looking up the sacred mantra of Lord Shiva, understanding the symbolism of Lord Vishnu's Sudarshana Chakra, or simply looking for daily wisdom, the application provides instantaneous, locally-sourced answers without requiring internet bandwidth for heavy data loads. With built-in features like a global search, alias recognition (e.g., searching "Mahadev" finds "Shiva"), and a personalized favorites system, it serves as a reliable pocket guide to Hindu spirituality.
 
 ---
 
-## 🎨 Design Philosophy
+## Features
 
-The experience is intentionally **minimalist, respectful, and warm** — a modern spiritual aesthetic that feels premium yet humble. Every choice favors clarity and calm, with a **mobile-first** layout and generous touch targets so that **older users can navigate it with ease**.
-
-**Theme Colors**
-
-| Color | Hex | Usage |
-| --- | --- | --- |
-| 🌹 Dusty Rose | `#E11D48` | Primary accent & calls to action |
-| 🏜️ Warm Beige | `#F5F0E8` | Soft, inviting backgrounds |
-| 🤎 Dark Brown | `#1A0A00` | Grounded, readable text |
-
-**Typography**
-
-- **Poppins** — headings, for a friendly modern character.
-- **Inter** — body text, for effortless readability.
+- ✨ **Lightning-Fast Search:** Instantly query Hindu deities by their primary names or common aliases (e.g., *Mahadev*, *Bholenath*, *Kanha*).
+- 📖 **Comprehensive Deity Profiles:** Detailed pages containing lore, appearance, symbols, Vahanas (vehicles), and associated festivals.
+- 🕉️ **Sacred Mantras:** Beautifully formatted mantras with a one-click copy function for daily chanting.
+- 💡 **Daily Wisdom:** A dynamically rotating section providing profound quotes and life lessons drawn from Hindu philosophy.
+- ❤️ **Personalized Favorites:** Users can bookmark their most revered deities. The data is securely saved in `localStorage`, maintaining privacy.
+- 👑 **Father's Favorite:** A prominently featured section specifically dedicated to the deity most cherished by my father.
+- 📱 **Mobile-First & Responsive:** A fluid layout that looks stunning on everything from ultra-wide monitors to older smartphones.
+- ♿ **Accessibility-First:** Engineered with semantic HTML, keyboard navigation, and high-contrast readable typography.
 
 ---
 
-## 🛠️ Tech Stack
+## Visuals
+
+> *Note: Placeholders below represent the high-fidelity UI of the application.*
+
+### Homepage
+![Homepage Experience](/placeholder-homepage.png)
+*A serene, distraction-free entry point featuring a soft, ambient glow and gentle parallax geometry.*
+
+### Search & Discovery
+![Search Experience](/placeholder-search.png)
+*Real-time predictive search recognizing hundreds of traditional aliases and avatars.*
+
+### Deity Details
+![Deity Profile](/placeholder-details.png)
+*A deeply detailed, beautifully typeset profile page highlighting symbols, festivals, and mantras.*
+
+### Mobile Experience
+![Mobile View](/placeholder-mobile.png)
+*A touch-friendly, responsive interface ensuring perfect legibility on the go.*
+
+---
+
+## Design Philosophy
+
+The aesthetic of Sanatan Sarathi is rooted in **Modern Spiritual Minimalism**. 
+
+- **Typography:** We use *Inter* for crisp, legible body text and *Poppins* for elegant, welcoming headings.
+- **Color Palette:** A soothing balance of deep, meditative dark tones (backgrounds) paired with subtle warm gold accents, evoking the feeling of a lit diya (lamp).
+- **Motion:** Powered by Framer Motion, the application uses soft fades, gentle upward reveals, and continuous slow-rotating sacred geometry (like lotuses and chakras). All animations strictly respect the user's OS-level Reduced Motion preferences.
+- **UX:** Touch targets are oversized (minimum 44px) to ensure elders can navigate effortlessly without accidental taps.
+
+---
+
+## Tech Stack
 
 | Technology | Purpose |
-| --- | --- |
-| **Next.js 16** | App Router framework & rendering |
-| **TypeScript** | Type-safe, maintainable code |
-| **Tailwind CSS 4** | Utility-first styling & theming |
-| **shadcn/ui** | Accessible, composable UI components |
-| **Framer Motion** | Smooth animations & scroll reveals |
-| **Lucide React** | Consistent, elegant icon set |
-| **Local JSON Data** | Self-contained deity content |
-| **LocalStorage** | Persisting favourites on-device |
+| :--- | :--- |
+| **Next.js 16 (App Router)** | Framework for React, handling routing, layouts, and SEO |
+| **TypeScript** | End-to-end type safety and developer experience |
+| **Tailwind CSS v4** | Utility-first styling with a custom design token system |
+| **shadcn/ui** | Accessible, unstyled component primitives |
+| **Framer Motion** | Fluid, physics-based animations and transitions |
+| **Lucide React** | Clean, consistent, and customizable iconography |
+| **LocalStorage** | Privacy-first state persistence for user favorites |
 
 ---
 
-## 📁 Project Structure
+## Architecture Overview
 
+Sanatan Sarathi is built with a highly decoupled, maintainable architecture:
+
+```text
+Sanatan-Sarathi/
+├── app/                  # Next.js App Router (pages, layouts, SEO metadata)
+├── components/           # Reusable UI system
+│   ├── ui/               # shadcn primitive components (buttons, cards, inputs)
+│   └── ...               # Domain-specific components (DeityCard, Hero, InstantSearch)
+├── hooks/                # Custom React hooks (use-favourites, use-mobile)
+├── lib/                  # Utilities and local data sources (deities.ts)
+└── public/               # Static assets, Open Graph images, and icons
 ```
-sanatan-sarathi/
-├── app/
-│   ├── deity/
-│   │   └── [slug]/
-│   │       └── page.tsx        # Dynamic deity detail route
-│   ├── search/
-│   │   └── page.tsx            # Search & explore page
-│   ├── globals.css             # Theme tokens & global styles
-│   ├── layout.tsx              # Root layout, fonts & metadata
-│   └── page.tsx                # Homepage
-├── components/
-│   ├── ui/                     # shadcn/ui primitives
-│   ├── hero.tsx                # Animated hero with instant search
-│   ├── instant-search.tsx      # Alias-aware live search dropdown
-│   ├── featured-deities.tsx    # Featured gallery
-│   ├── deity-card.tsx          # 3D tilt deity card
-│   ├── deity-detail.tsx        # Full deity profile
-│   ├── mantra-card.tsx         # Mantra with copy-to-clipboard
-│   ├── daily-wisdom.tsx        # Rotating daily verse
-│   ├── dedication.tsx          # Father's Day dedication band
-│   ├── fathers-favourite.tsx   # "My Father's Favourite Deity"
-│   ├── favourite-deities.tsx   # Saved favourites section
-│   ├── reveal.tsx              # Scroll-reveal animation wrapper
-│   └── site-header.tsx         # Navigation header
-├── hooks/
-│   └── use-favourites.ts       # LocalStorage favourites hook
-├── lib/
-│   └── deities.ts              # Deity data & search utilities
-└── public/
-    └── deities/                # Devotional artwork
-```
+
+The data layer is currently powered by statically exported TypeScript objects (`lib/deities.ts`). This guarantees zero-latency loads, offline-capable expansion potential, and removes the need for a database, ensuring the app remains perfectly free and infinitely scalable.
 
 ---
 
-## 🚀 Getting Started
+## Installation
 
-Clone the repository, then run the following commands:
+To run this project locally, ensure you have Node.js (v18.17+) installed.
 
 ```bash
-# Install dependencies
+# 1. Clone the repository
+git clone https://github.com/AdityaP116/Sanatan-Sarathi.git
+
+# 2. Navigate into the directory
+cd Sanatan-Sarathi
+
+# 3. Install dependencies
 npm install
 
-# Start the development server
+# 4. Start the development server
 npm run dev
+```
 
-# Create a production build
+To create a production-ready build:
+
+```bash
+# Compile the application for production
 npm run build
 
-# Run the production server
+# Start the optimized production server
 npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the app.
+---
+
+## Accessibility & Performance
+
+**Accessibility (a11y):**
+- Strict adherence to WCAG contrast guidelines.
+- Fully navigable via keyboard (Tab/Shift+Tab) with visible `focus-visible` rings.
+- Semantic HTML (`<nav>`, `<ul>`, `<main>`, `<article>`) for screen readers.
+- Motion dynamically disables if the user prefers reduced motion on their OS.
+
+**Performance:**
+- `0` database queries.
+- Statically generated routes (SSG) for all deity profiles.
+- Optimized images via `next/image` preventing cumulative layout shifts (CLS).
 
 ---
 
-## 📸 Screenshots
+## Future Roadmap
 
-| Homepage | Search Experience |
-| --- | --- |
-| ![Homepage](./public/screenshots/homepage.png) | ![Search](./public/screenshots/search.png) |
+While fully functional, Sanatan Sarathi is a living project. Planned updates include:
 
-| Deity Details Page | Mobile View |
-| --- | --- |
-| ![Deity Details](./public/screenshots/deity-details.png) | ![Mobile](./public/screenshots/mobile.png) |
-
-> _Replace the placeholders above with your own screenshots in `public/screenshots/`._
+- [ ] **Audio Playback:** High-quality, serene audio clips for proper mantra pronunciation.
+- [ ] **Festival Calendar:** A dynamic calendar highlighting upcoming Hindu festivals based on the lunar cycle.
+- [ ] **Sanskrit Pronunciation Guide:** Phonetic spelling and audio assistance for traditional terms.
+- [ ] **Multi-language Support:** Expanding UI and data support for Hindi, Tamil, Telugu, and Gujarati.
+- [ ] **Regional Deity Collections:** Expanding the database to include localized deities and regional avatars.
 
 ---
 
-## 🔮 Future Enhancements
+## Dedicated to My Father
 
-- 🎧 **Audio mantra recitation** — listen and chant along.
-- 📅 **Festival calendar** — never miss an auspicious day.
-- 🗣️ **Sanskrit pronunciation guide** — phonetic help for mantras.
-- 👨‍👩‍👧 **Family tradition section** — record and share personal rituals.
-- 🗺️ **Regional deity collections** — explore deities by region.
-- 🌐 **Multilingual support** — Hindi, Sanskrit, and more.
-- 🤖 **AI-powered spiritual assistant** — ask questions, get guidance.
+This project is deeply personal. It is dedicated to my father—the first spiritual guide in my life.
+
+Thank you for your endless guidance, the values you instilled in me, your unwavering support, and the inspiration you provide every single day. Just as the Sarathi (charioteer) guides the chariot, you have guided me through life's complexities with wisdom and patience. 
+
+Happy Father's Day.
 
 ---
 
-## ♿ Accessibility
+## Contributing
 
-Built so that everyone — including elders and first-time users — can explore with comfort:
+Contributions make the open-source community an incredible place to learn, inspire, and create. Any contributions to expand the deity database, improve translations, or fix bugs are **greatly appreciated**.
 
-- ⌨️ **Keyboard navigation** across interactive elements.
-- 🌗 **High contrast** between text and backgrounds.
-- 📐 **Responsive layouts** that adapt to any screen.
-- 🔤 **Readable typography** with comfortable sizing and spacing.
-- 👆 **Large touch targets** for easy tapping.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
----
+## License
 
-## 💛 Dedicated to My Father
-
-> _This project is for you, Papa._
->
-> Thank you for being my first guide — the one who taught me patience, devotion, and the quiet strength of doing things with sincerity. The values you live by shaped every line of this work. Like a charioteer who steadies the path without seeking the spotlight, you have always guided gently and given generously.
->
-> **Sanatan Sarathi** is my small way of saying what is hard to put into words: _thank you, I love you, and I am grateful for everything._
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-## 📄 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for details.
-
----
-
-<div align="center">
-
-**Built with devotion, gratitude, and modern technology.** 🪔
-
-</div>
+> *"Built with devotion, gratitude, and modern technology."*
