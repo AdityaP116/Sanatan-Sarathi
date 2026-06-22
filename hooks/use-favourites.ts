@@ -1,36 +1,34 @@
 "use client"
 
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useMemo, useSyncExternalStore } from "react"
 
 const STORAGE_KEY = "sanatan-sarathi-favourites"
 const EVENT_NAME = "favourites-updated"
 
-function readFavourites(): string[] {
-  if (typeof window === "undefined") return []
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY)
-    return raw ? (JSON.parse(raw) as string[]) : []
-  } catch {
-    return []
+function subscribe(callback: () => void) {
+  window.addEventListener(EVENT_NAME, callback)
+  window.addEventListener("storage", callback)
+  return () => {
+    window.removeEventListener(EVENT_NAME, callback)
+    window.removeEventListener("storage", callback)
   }
 }
 
+function getSnapshot() {
+  return window.localStorage.getItem(STORAGE_KEY)
+}
+
+function getServerSnapshot() {
+  return null
+}
+
+const emptySubscribe = () => () => {}
+
 export function useFavourites() {
-  const [favourites, setFavourites] = useState<string[]>([])
-  const [hydrated, setHydrated] = useState(false)
+  const raw = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot)
+  const hydrated = useSyncExternalStore(emptySubscribe, () => true, () => false)
 
-  useEffect(() => {
-    setFavourites(readFavourites())
-    setHydrated(true)
-
-    const sync = () => setFavourites(readFavourites())
-    window.addEventListener(EVENT_NAME, sync)
-    window.addEventListener("storage", sync)
-    return () => {
-      window.removeEventListener(EVENT_NAME, sync)
-      window.removeEventListener("storage", sync)
-    }
-  }, [])
+  const favourites: string[] = useMemo(() => (raw ? JSON.parse(raw) : []), [raw])
 
   const persist = useCallback((next: string[]) => {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next))
@@ -39,15 +37,12 @@ export function useFavourites() {
 
   const toggleFavourite = useCallback(
     (slug: string) => {
-      setFavourites((prev) => {
-        const next = prev.includes(slug)
-          ? prev.filter((s) => s !== slug)
-          : [...prev, slug]
-        persist(next)
-        return next
-      })
+      const next = favourites.includes(slug)
+        ? favourites.filter((s) => s !== slug)
+        : [...favourites, slug]
+      persist(next)
     },
-    [persist],
+    [favourites, persist],
   )
 
   const isFavourite = useCallback(

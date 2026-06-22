@@ -2,8 +2,8 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useRef, useState } from "react"
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion"
+import { useRef, useSyncExternalStore } from "react"
+import { motion, useScroll, useTransform } from "framer-motion"
 
 import { InstantSearch } from "@/components/instant-search"
 
@@ -19,21 +19,20 @@ const fadeUp = {
 }
 
 export function Hero() {
-  const shouldReduceMotion = useReducedMotion()
-  const [mounted, setMounted] = useState(false)
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  )
   const sectionRef = useRef<HTMLElement>(null)
-
-  // Render the continuously-animating decorative geometry only on the client
-  // to avoid SSR transform hydration mismatches.
-  useEffect(() => setMounted(true), [])
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
   })
 
   // Gentle parallax for the layered background elements.
-  const patternY = useTransform(scrollYProgress, [0, 1], [0, shouldReduceMotion ? 0 : 120])
-  const ringY = useTransform(scrollYProgress, [0, 1], [0, shouldReduceMotion ? 0 : 80])
+  const patternY = useTransform(scrollYProgress, [0, 1], [0, 120])
+  const ringY = useTransform(scrollYProgress, [0, 1], [0, 80])
 
   return (
     <section

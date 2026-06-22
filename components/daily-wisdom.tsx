@@ -3,11 +3,13 @@ import { Quote } from "lucide-react"
 import { Reveal } from "@/components/reveal"
 import { dailyWisdomQuotes } from "@/lib/deities"
 
+function getDayOfYear() {
+  return Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86_400_000)
+}
+
 export function DailyWisdom() {
   // Pick a quote that changes by day of the year for a gentle "daily" feel.
-  const dayOfYear = Math.floor(
-    (Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86_400_000,
-  )
+  const dayOfYear = getDayOfYear()
   const quote = dailyWisdomQuotes[dayOfYear % dailyWisdomQuotes.length]
 
   return (

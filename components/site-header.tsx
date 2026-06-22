@@ -18,25 +18,33 @@ export function SiteHeader() {
             </span>
           </span>
         </Link>
-        <nav className="flex shrink-0 items-center gap-0.5 text-sm font-medium sm:gap-2">
-          <Link
-            href="/"
-            className="hidden rounded-full px-2.5 py-2 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground sm:inline-block sm:px-3"
-          >
-            Home
-          </Link>
-          <Link
-            href="/search"
-            className="rounded-full px-2.5 py-2 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground sm:px-3"
-          >
-            Explore
-          </Link>
-          <Link
-            href="/#favourites"
-            className="rounded-full px-2.5 py-2 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground sm:px-3"
-          >
-            Favourites
-          </Link>
+        <nav aria-label="Main Navigation">
+          <ul className="flex shrink-0 items-center gap-0.5 text-sm font-medium sm:gap-2">
+            <li>
+              <Link
+                href="/"
+                className="hidden rounded-full px-2.5 py-2 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground sm:inline-block sm:px-3 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/search"
+                className="rounded-full px-2.5 py-2 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground sm:px-3 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+              >
+                Explore
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/#favourites"
+                className="rounded-full px-2.5 py-2 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground sm:px-3 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+              >
+                Favourites
+              </Link>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>

@@ -50,7 +50,7 @@ export function FavouriteButton({ slug, variant = "icon", className }: Favourite
       aria-label={label}
       title={label}
       className={cn(
-        "size-9 rounded-full bg-card/90 shadow-sm backdrop-blur transition-colors hover:bg-card",
+        "size-11 sm:size-10 rounded-full bg-card/90 shadow-sm backdrop-blur transition-colors hover:bg-card",
         className,
       )}
     >

@@ -7,7 +7,6 @@ import {
   motion,
   useMotionTemplate,
   useMotionValue,
-  useReducedMotion,
   useSpring,
 } from "framer-motion"
 import { ArrowRight } from "lucide-react"
@@ -19,7 +18,6 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import type { Deity } from "@/lib/deities"
 
 export function DeityCard({ deity }: { deity: Deity }) {
-  const shouldReduceMotion = useReducedMotion()
   const ref = useRef<HTMLDivElement>(null)
 
   // Rotation springs for the subtle 3D tilt effect.
@@ -28,7 +26,7 @@ export function DeityCard({ deity }: { deity: Deity }) {
   const transform = useMotionTemplate`perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
 
   function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
-    if (shouldReduceMotion || !ref.current) return
+    if (!ref.current) return
     const rect = ref.current.getBoundingClientRect()
     const px = (e.clientX - rect.left) / rect.width - 0.5
     const py = (e.clientY - rect.top) / rect.height - 0.5
@@ -46,7 +44,7 @@ export function DeityCard({ deity }: { deity: Deity }) {
       ref={ref}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      whileHover={shouldReduceMotion ? undefined : { y: -6 }}
+      whileHover={{ y: -6 }}
       transition={{ type: "spring", stiffness: 300, damping: 24 }}
       style={{ transform, transformStyle: "preserve-3d" }}
       className="h-full"

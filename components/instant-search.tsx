@@ -99,7 +99,7 @@ export function InstantSearch({
                     <button
                       type="button"
                       onClick={() => router.push(`/deity/${deity.slug}`)}
-                      className="flex w-full items-center gap-3 rounded-xl p-2 text-left transition-colors hover:bg-secondary"
+                      className="flex w-full items-center gap-3 rounded-xl p-2 text-left transition-colors hover:bg-secondary focus-visible:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                     >
                       <span className="relative size-11 shrink-0 overflow-hidden rounded-lg bg-secondary">
                         <Image
@@ -125,7 +125,7 @@ export function InstantSearch({
                     onClick={() =>
                       router.push(`/search?q=${encodeURIComponent(value.trim())}`)
                     }
-                    className="flex w-full items-center justify-between rounded-xl px-3 py-2 text-sm font-medium text-primary transition-colors hover:bg-secondary"
+                    className="flex w-full items-center justify-between rounded-xl px-3 py-2 text-sm font-medium text-primary transition-colors hover:bg-secondary focus-visible:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                   >
                     See all results for {`"${value.trim()}"`}
                     <CornerDownLeft className="size-4" aria-hidden="true" />
